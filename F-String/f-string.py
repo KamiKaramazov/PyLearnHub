@@ -30,6 +30,6 @@ print(f"You are {age} years old!")
 
 # Write a program that takes a user's weight in kilograms and converts it to pounds. Display the weight in pounds using f-strings. (1 kilogram = 2.20462 pounds)
 current_weight_kg = float(input("Please enter your weight in kilograms: "))
-weight_in_pounds = current_weight_kg * 2.20462
+weight_in_pounds = int(current_weight_kg * 2.20462)
 print(f"Your weight is {weight_in_pounds} pounds.")
 # Explanation: This program converts the weight from kilograms to pounds and prints it using an f-string.
