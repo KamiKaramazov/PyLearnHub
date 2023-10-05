@@ -1,4 +1,4 @@
-# Welcome to the "Random Python Exercise" repository! 🐍
+# Welcome to the "Random Python Projects" repository! 🐍
 
 In this repository, you'll find a collection of Python exercises designed to help you learn and practice Python programming concepts. Whether you're a beginner looking to get started with Python or an experienced developer aiming to sharpen your skills, you'll find exercises here to suit your needs.
 
