@@ -36,3 +36,20 @@ print(f"Your data type is {type(eval(data_type_check))}")
 
 # Euclidean distance calculator
 
+import math
+def euclidean_distance(point1, point2):
+    if len(point1) != len(point2):
+        raise ValueError("Distance should have different dimensions for each point")
+    square_sum = sum((p1 - p2) ** 2 for p1, p2 in zip(point1, point2))
+    distance = math.sqrt(square_sum)
+    return distance
+
+point1 = input("Enter the coordinates of point 1: ")
+point2 = input("Enter the coordinates of point 2: ")
+
+point1 = tuple(map(float, point1.split(',')))
+point2 = tuple(map(float, point2.split(',')))
+
+distance = euclidean_distance(point1, point2)
+
+print(f"Euclidean distance between {point1} and {point2} is {distance:.2f}")
