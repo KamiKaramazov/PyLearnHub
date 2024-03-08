@@ -1,23 +1,23 @@
-# Welcome to Python Playground!
+# Python Learning Repository
 
-Hey there, fellow Python enthusiast! Welcome to my little corner of the coding world. 🐍✨
+Welcome to the Python Learning Repository! This repository is designed to help beginners, intermediate, and advanced learners of Python improve their skills through various resources and projects.
 
-### About This Repository
+## Levels
 
-This repository is my playground, where I experiment with various Python projects, tackle coding challenges, and explore new ideas. Here, you'll find a mix of fun projects, practical utilities, and maybe even a few surprises along the way.
+### Level 1 (Beginner)
+- [Python Crash Course](https://github.com/KamiKaramazov/python-crash-course) (Doing)
+- [30 Days of Python Challenge](https://github.com/KamiKaramazov/30-days-of-python) (Doing)
+- [Python 101 for Hackers - TCM Sec](https://github.com/KamiKaramazov/python-101-for-hackers) (Doing)
 
-### What's Inside?
+### Level 2 (Intermediate)
+- [Python 201 for Hackers - TCM Sec](https://github.com/KamiKaramazov/python-201-for-hackers) (To Do)
 
-- **Challenges**: Dive into a collection of Python challenges and puzzles to sharpen your coding skills.
-- **Projects**: Explore a range of Python projects, from simple scripts to more complex applications.
-- **Learning Resources**: Find helpful resources, tutorials, and tips to level up your Python programming journey.
+### Level 3 (Advanced)
+- [Fluent Python](https://github.com/KamiKaramazov/fluent-python) (To Do)
+- [Black Hat Python](https://github.com/KamiKaramazov/black-hat-python) (To Do)
 
-### Contributing
+## How to Contribute
+- If you have any suggestions for additional resources or projects, feel free to open an issue or pull request.
+- Contributions to existing projects are also welcome. Just fork the repository, make your changes, and submit a pull request.
 
-Have an awesome Python project or a cool coding tip to share? I'd love to see it! Feel free to contribute to this repository by submitting a pull request.
-
-### Get in Touch
-
-Have questions, suggestions, or just want to say hi? Don't hesitate to reach out! You can contact me via [email](ahmettalhasen01@gmail.com) 
-
-Happy coding! 🚀
+Happy learning!
