@@ -46,3 +46,13 @@ print(5 + 3)
 print(16 - 8)
 print(4 * 2)
 print(16 / 2)
+
+###2-9. Favorite Number: 
+# Use a variable to represent your favorite number. Then, using that variable, create a message that reveals your favorite number. Print that message.
+user_input = input("Enter your favorite number: ")
+try:
+    favorite_number = int(user_input)
+    print(f"Your input is a valid integer: {favorite_number}")
+except:
+    print("Invalid input. Please enter a valid integer.")
+
