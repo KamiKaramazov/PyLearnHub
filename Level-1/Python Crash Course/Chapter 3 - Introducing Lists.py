@@ -126,6 +126,192 @@ def handle_new_invite():
 
 handle_new_invite()
 
+### 3-7. Shrinking Guest List: 
+# You just found out that your new dinner table won’t arrive in time for the dinner, and you have space for only two guests.
+# • Start with your program from Exercise 3-6. Add a new line that prints a message saying that you can invite only two people for dinner.
+# • Use pop() to remove guests from your list one at a time until only two names remain in your list. Each time you pop a name from your list, print a message to that person letting them know you’re sorry you can’t invite them to dinner.
+# • Print a message to each of the two people still on your list, letting them know they’re still invited.
+# • Use del to remove the last two names from your list, so you have an empty list. Print your list to make sure you actually have an empty list at the end of your program.
+import random
+
+invite = ["Monkey D. Luffy", "Roronoa Zoro"]
+chosen_invite = random.choice(invite)
+your_name = input("Enter your name: ").strip()
+
+def check_number(your_name):
+    if any(character.isdigit() for character in your_name):
+        print("Please enter a name without any numbers.")
+    elif chosen_invite in invite:
+        print(f"Dear {chosen_invite},\nYou are cordially invited to a delightful dinner at my place. Let's share great conversations and good food!\nSincerely,\n{your_name.title()}")
+        invite.remove(chosen_invite)
+        print(f"Unfortunately, {chosen_invite} cannot make it. However, you are still invited!")
+
+check_number(your_name)
+
+def handle_new_invite():
+    print("\nAs you have more space available at the dinner table, you can choose additional 2 guests to invite.")
+    print("Choose one or more visitors by entering their numbers separated by commas:")
+    print("1. Nami\n2. Usopp\n3. Sanji\n4. Tony Tony Chopper\n5. Nico Robin\n6. Franky\n7. Brook\n8. Jimbei")
+    new_invite = input("Enter numbers: ")
+    selected_visitors = []
+    for num in new_invite.split(","):
+        num = int(num.strip())
+        if num >= 1 and num <= 8:
+            selected_visitors.append(num)
+        else:
+            print(f"Invalid option: {num}")
+
+    if selected_visitors:
+        print("\nNew invites:")
+        for num in selected_visitors:
+            if num == 1:
+                print("Nami")
+            elif num == 2:
+                print("Usopp")
+            elif num == 3:
+                print("Sanji")
+            elif num == 4:
+                print("Tony Tony Chopper")
+            elif num == 5:
+                print("Nico Robin")
+            elif num == 6:
+                print("Franky")
+            elif num == 7:
+                print("Brook")
+            elif num == 8:
+                print("Jimbei")
+
+handle_new_invite()
+
+while len(invite) > 2:
+        removed_guest = invite.pop()
+        print(f"Sorry, {removed_guest}, we can't accommodate you for dinner this time.")
+
+for guest in invite:
+        print("\nInvitation messages to remaining guests:")
+        print(f"Dear {guest},\nYou are still cordially invited to dinner. Let's have a great time together!")
+
+del invite[:]  
+print("\nAfter removing all guests, the invite list is now empty:", invite)
+
+### 3-8. Seeing the World: Think of at least five places in the world you’d like to
+# visit.
+# • Store the locations in a list. Make sure the list is not in alphabetical order.
+places_to_visit = ["Tokyo", "Paris", "Sydney", "New York", "Rio de Janeiro"]
+
+# • Print your list in its original order. Don’t worry about printing the list neatly, just print it as a raw Python list.
+print(f"\nOriginal order: \n{places_to_visit}")
+
+# • Use sorted() to print your list in alphabetical order without modifying the actual list.
+print(f"\nSorted in alphabetical order: \n{sorted(places_to_visit)}")
+
+# • Show that your list is still in its original order by printing it.
+print(f"\nStill in original order: \n{places_to_visit}")
+
+# • Use sorted() to print your list in reverse alphabetical order without changing the order of the original list.
+print(f"\nSorted in reverse alphabetical order: \n{sorted(places_to_visit, reverse=True)}")
 
 
+# • Show that your list is still in its original order by printing it again.
+print(f"\nStill in original order: \n{places_to_visit}")
+
+# • Use reverse() to change the order of your list. Print the list to show that its order has changed.
+places_to_visit.reverse()
+print(f"\nReversed order: \n{places_to_visit}")
+
+
+# • Use reverse() to change the order of your list again. Print the list to show it’s back to its original order.
+places_to_visit.reverse()
+print(f"\nReversed order again: \n{places_to_visit}")
+
+# • Use sort() to change your list so it’s stored in alphabetical order. Print the list to show that its order has been changed.
+places_to_visit.sort()
+print(f"\nSorted in alphabetical order: \n{places_to_visit}")
+
+# • Use sort() to change your list so it’s stored in reverse alphabetical order.
+places_to_visit.sort(reverse=True)
+print(f"\nSorted in reverse alphabetical order: \n{places_to_visit}")
+
+# Print the list to show that its order has changed.
+print(places_to_visit)
+
+### 3-9. Dinner Guests: 
+# Working with one of the programs from Exercises 3-4 through 3-7 (page 42), use len() to print a message indicating the number of people you are inviting to dinner.
+
+import random
+
+invite = ["Monkey D. Luffy", "Roronoa Zoro"]
+chosen_invite = random.choice(invite)
+your_name = input("Enter your name: ").strip()
+
+def check_number(your_name):
+    if any(character.isdigit() for character in your_name):
+        print("Please enter a name without any numbers.")
+    elif chosen_invite in invite:
+        print(f"Dear {chosen_invite},\nYou are cordially invited to a delightful dinner at my place. Let's share great conversations and good food!\nSincerely,\n{your_name.title()}")
+        invite.remove(chosen_invite)
+        print(f"Unfortunately, {chosen_invite} cannot make it. However, you are still invited!")
+
+check_number(your_name)
+
+def handle_new_invite():
+    print("\nAs you have more space available at the dinner table, you can choose additional 2 guests to invite.")
+    print("Choose one or more visitors by entering their numbers separated by commas:")
+    print("1. Nami\n2. Usopp\n3. Sanji\n4. Tony Tony Chopper\n5. Nico Robin\n6. Franky\n7. Brook\n8. Jimbei")
+    new_invite = input("Enter numbers: ")
+    selected_visitors = []
+    for num in new_invite.split(","):
+        num = int(num.strip())
+        if num >= 1 and num <= 8:
+            selected_visitors.append(num)
+        else:
+            print(f"Invalid option: {num}")
+
+    if selected_visitors:
+        print("\nNew invites:")
+        for num in selected_visitors:
+            if num == 1:
+                print("Nami")
+            elif num == 2:
+                print("Usopp")
+            elif num == 3:
+                print("Sanji")
+            elif num == 4:
+                print("Tony Tony Chopper")
+            elif num == 5:
+                print("Nico Robin")
+            elif num == 6:
+                print("Franky")
+            elif num == 7:
+                print("Brook")
+            elif num == 8:
+                print("Jimbei")
+
+handle_new_invite()
+
+while len(invite) > 2:
+        removed_guest = invite.pop()
+        print(f"Sorry, {removed_guest}, we can't accommodate you for dinner this time.")
+
+for guest in invite:
+        print("\nInvitation messages to remaining guests:")
+        print(f"Dear {guest},\nYou are still cordially invited to dinner. Let's have a great time together!")
+print(f"You are inviting {len(invite)} people to dinner.")
+del invite[:]  
+print("\nAfter removing all guests, the invite list is now empty:", invite)
+
+### 3-10. Every Function: 
+# Think of something you could store in a list. For example, you could make a list of mountains, rivers, countries, cities, languages, or anything else you’d like. Write a program that creates a list containing these items and then uses each function introduced in this chapter at least once
+
+my_list = []
+
+input_items = input(f"Current list: {my_list}\nPlease add something to the list (separated by commas): ")
+
+items = [item.strip() for item in input_items.split(',')]
+
+my_list.extend(items)
+
+print("\nFinal list:")
+for item in my_list:
+    print(item)
 
