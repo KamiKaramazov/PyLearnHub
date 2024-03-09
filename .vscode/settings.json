@@ -1,5 +1,8 @@
 {
     "cSpell.words": [
+        "Napoli",
+        "Rustica",
         "Sama"
-    ]
+    ],
+    "python.analysis.typeCheckingMode": "basic"
 }
