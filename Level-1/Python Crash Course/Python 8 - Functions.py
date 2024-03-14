@@ -261,3 +261,102 @@ def show_completed_models(completed_models):
     print("\nThe following models have been printed:")
     for model in completed_models:
         print(model)
+
+
+                                                ############ More Examples ############
+
+# Write a function called calculate_average that takes a list of numbers as input and returns the average of those numbers.
+
+from statistics import mean 
+
+def calculate_average(*numbers):
+    average = str(mean(numbers))
+    return average
+    
+numbers = []
+
+print("\nEnter 'quit' or 'exit' to end the program.")
+
+while True:
+        user_input = input("Please enter a number: ")
+        if user_input.lower() in ["quit", "exit"]:
+              break
+        numbers.append(float(user_input))
+
+average = calculate_average(*numbers)
+print(f"The average is: {average}")
+
+# Create a function called is_prime that takes an integer as input and returns True if the number is prime, and False otherwise.
+
+def is_prime(number):
+    if number <= 1:
+        return False
+    for i in range(2, int(number ** 0.5) + 1):
+        if number % i == 0:
+            return False
+    return True
+
+print(is_prime(7))  
+print(is_prime(10))
+
+# Write a function called reverse_string that takes a string as input and returns the reverse of that string.
+
+def reverse_string(string):
+    reverse = string[::-1]
+    return reverse
+
+print("\nEnter 'quit' or 'exit' to end the program.")
+
+while True:
+    user_input = input("Enter your string: ")
+    if user_input.lower() in ["quit", "exit"]:
+        break
+    reversed_string = reverse_string(user_input)
+    print("Reversed string:", reversed_string)
+
+# Create a function called count_vowels that takes a string as input and returns the number of vowels (a, e, i, o, u) in the string.
+
+def count_vowels(string):
+    count = 0 
+    vowels = ["a", "e", "i", "o", "u"]
+    for char in string:
+        if char.lower() in vowels:
+            count += 1
+    return count
+    
+input_str = input("Enter your input: ")
+result = count_vowels(input_str)
+print("Number of vowels:", result)
+
+# Write a function called find_max that takes a list of numbers as input and returns the largest number in the list.
+
+def find_max(numbers):
+    if not numbers:
+        return None  
+    return max(numbers)
+
+while True:
+    print("\nEnter 'quit' or 'exit' to end the program.")
+    user_input = input("Enter numbers (separated by spaces): ")
+    if user_input.lower() == 'quit' or user_input.lower() == 'exit':
+        break
+    
+    try:
+        num_list = [int(num) for num in user_input.split()]
+        print("Max number is:", find_max(num_list))
+    except ValueError:
+        print("Invalid input. Please enter valid numbers.")
+
+# Create a function called capitalize_words that takes a string as input and returns the same string with each word capitalized.
+
+def capitalize_words(words):
+    return words.title()
+
+while True:
+    print("\nEnter 'quit' or 'exit' to end the program.")
+    user_input = input("Enter words: ")
+    if user_input.lower() == 'quit' or user_input.lower() == 'exit':
+        break
+    capitalized_input = capitalize_words(user_input)
+    print("Capitalized words:", capitalized_input)
+
