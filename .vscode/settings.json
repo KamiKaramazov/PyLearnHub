@@ -1,12 +1,27 @@
 {
     "cSpell.words": [
         "Beyoncé",
+        "blit",
+        "blitme",
+        "centerx",
+        "collidepoint",
+        "FULLSCREEN",
+        "groupcollide",
+        "KEYDOWN",
+        "keypresses",
+        "KEYUP",
+        "midbottom",
+        "midtop",
+        "MOUSEBUTTONDOWN",
         "Napoli",
         "Rustica",
         "Sama",
+        "scorekeeping",
         "Senso",
         "Sheeran",
-        "Shibuya"
+        "Shibuya",
+        "SPACEBAR",
+        "spritecollideany"
     ],
     "python.analysis.typeCheckingMode": "off",
     "python.analysis.autoImportCompletions": false
