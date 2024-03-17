@@ -6,12 +6,15 @@ class Bullet(Sprite):
 
     def __init__(self, ai_settings, screen, ship):
         """Create a bullet object, at the ship's current position."""
-        super(Bullet, self).__init__()
+        super().__init__()  # Call the constructor of the parent class (Sprite)
         self.screen = screen
 
-        # Create bullet rect at (0, 0), then set correct position.
-        self.rect = pygame.Rect(0, 0, ai_settings.bullet_width,
-            ai_settings.bullet_height)
+        # Load the bullet image and get its rect.
+        #self.image = pygame.image.load("Level-1\\Python Crash Course\\Part 2 - Projects\\Project 1 - Alien Invasion\\images\\bullet.bmp")
+        #self.rect = self.image.get_rect()
+
+        # Create a bullet rect at (0, 0), then set the correct position.
+        self.rect = pygame.Rect(0, 0, ai_settings.bullet_width, ai_settings.bullet_height)
         self.rect.centerx = ship.rect.centerx
         self.rect.top = ship.rect.top
         

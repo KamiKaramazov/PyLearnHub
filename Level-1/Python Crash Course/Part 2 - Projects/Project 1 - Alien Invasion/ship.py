@@ -4,11 +4,13 @@ class Ship():
 
     def __init__(self, ai_settings, screen):
         """Initialize the ship, and set its starting position."""
+        # Initialize the ship's attributes.
         self.screen = screen
         self.ai_settings = ai_settings
 
         # Load the ship image, and get its rect.
-        self.image = pygame.image.load('Level-1\Python Crash Course\Part 2 - Projects\Project 1 - Alien Invasion\images\ship.bmp')
+        self.original_image = pygame.image.load('Level-1\Python Crash Course\Part 2 - Projects\Project 1 - Alien Invasion\images\ship.bmp')
+        self.image = pygame.transform.scale(self.original_image,(120, 92))  # Resize the image
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
 
@@ -36,4 +38,5 @@ class Ship():
 
     def blitme(self):
         """Draw the ship at its current location."""
+        # Draw the ship at its current location.
         self.screen.blit(self.image, self.rect)
