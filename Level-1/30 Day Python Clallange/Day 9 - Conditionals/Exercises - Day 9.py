@@ -125,7 +125,7 @@ luffy = {
     'age': 19,
     'country': 'East Blue',
     'is_married': False,
-    'skills': ['Haki', 'Gomu Gomu no Mi', 'Fighting', 'Leadership'],
+    'skills': ['Haki', 'Gomu Gomu no Mi','Gomu Gomu no Pistol', 'Gomu Gomu no Gatling', 'Gear Second', 'Gear Third', 'Gear Fourth'],
     'address': {
         'island': 'Foosha Village',
         'zipcode': 'unknown'
