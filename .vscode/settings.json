@@ -24,5 +24,8 @@
         "spritecollideany"
     ],
     "python.analysis.typeCheckingMode": "off",
-    "python.analysis.autoImportCompletions": false
+    "python.analysis.autoImportCompletions": false,
+    "python.analysis.extraPaths": [
+        "./Level-1/30 Day Python Clallange/Day 10 - Loops"
+    ]
 }
