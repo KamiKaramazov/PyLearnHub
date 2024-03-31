@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
+        "Åland",
         "Beyoncé",
         "blit",
         "blitme",
@@ -7,6 +8,7 @@
         "collidepoint",
         "FULLSCREEN",
         "groupcollide",
+        "Jinbei",
         "KEYDOWN",
         "keypresses",
         "KEYUP",
@@ -15,6 +17,7 @@
         "MOUSEBUTTONDOWN",
         "Napoli",
         "notroot",
+        "Pago",
         "Rustica",
         "Sama",
         "scorekeeping",
@@ -22,7 +25,8 @@
         "Sheeran",
         "Shibuya",
         "SPACEBAR",
-        "spritecollideany"
+        "spritecollideany",
+        "Tirana"
     ],
     "python.analysis.typeCheckingMode": "off",
     "python.analysis.autoImportCompletions": false,

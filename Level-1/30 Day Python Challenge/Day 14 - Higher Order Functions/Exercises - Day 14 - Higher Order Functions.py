@@ -118,12 +118,17 @@ def get_string_lists(arr):
 
 numbers = [1, 2, 3, 4, 5]
 sum_numbers = reduce(lambda x, y: x + y, numbers)
+
 print("Sum of numbers:", sum_numbers)
+
+from functools import reduce
+from countries_data import country_info
 
 ### Use reduce to concatenate all the countries
 
 countries = ['Estonia', 'Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
 concatenated_countries = reduce(lambda x, y: x + ', ' + y, countries)
+
 print("Concatenated countries:", concatenated_countries, "are north European countries")
 
 ### Declare a function called categorize_countries
@@ -146,25 +151,72 @@ def get_countries_starting_with(countries):
 ### Declare a get_first_ten_countries function
 
 def get_first_ten_countries():
-    with open('data/countries.txt', 'r') as file:
+    with open('Level-1\\30 Day Python Challenge\\Day 14 - Higher Order Functions\\countries_data.py', 'r') as file:
         return [next(file).strip() for _ in range(10)]
 
 ### Declare a get_last_ten_countries function
     
 def get_last_ten_countries():
-    with open('Level-1\30 Day Python Challenge\Day 14 - Higher Order Functions\countries_data.py', 'r') as file:
-        lines = file.readlines()
-        return [line.strip() for line in lines[-10:]]
+    last_ten_countries = [country['name'] for country in country_info[-10:]]
+    return last_ten_countries
 
 ### Test the functions
-    
+
 arr = ['a', 'b', 'c', 'd', 'e', 1, 2, 3, 'f', 'g']
+
 print("String items in the list:", get_string_lists(arr))
 
 countries = ['England', 'Finland', 'Mongolia', 'Thailand', 'Pakistan', 'Ireland', 'Scotland']
+
 print("Categorized countries:", categorize_countries(countries))
-
 print("Number of countries starting with each letter:", get_countries_starting_with(countries))
-
 print("First ten countries:", get_first_ten_countries())
 print("Last ten countries:", get_last_ten_countries())
+
+# Exercises: Level 3
+# Use the countries_data.py (https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries-data.py) file and follow the tasks below:
+"""Sort countries by name, by capital, by population
+Sort out the ten most spoken languages by location.
+Sort out the ten most populated countries."""
+
+from countries_data import country_info
+
+### Sort countries by name
+
+countries_by_name = sorted(country_info, key=lambda x: x['name'])
+
+### Sort countries by capital
+
+countries_by_capital = sorted(country_info, key=lambda x: x['capital'])
+
+### Sort countries by population
+
+countries_by_population = sorted(country_info, key=lambda x: x['population'])
+
+### Sort languages by location
+
+all_languages = [language for country in country_info for language in country['languages']]
+languages_by_location = sorted(set(all_languages))
+
+### Sort most spoken languages by location
+
+language_count = {}
+for language in all_languages:
+    if language in language_count:
+        language_count[language] += 1
+    else:
+        language_count[language] = 1
+
+most_spoken_languages = sorted(language_count.items(), key=lambda x: x[1], reverse=True)[:10]
+
+### Sort most populated countries
+
+most_populated_countries = sorted(country_info, key=lambda x: x['population'], reverse=True)[:10]
+
+### Print the results
+
+print("Countries sorted by name:", [country['name'] for country in countries_by_name])
+print("Countries sorted by capital:", [country['capital'] for country in countries_by_capital])
+print("Countries sorted by population:", [country['name'] for country in countries_by_population])
+print("Ten most spoken languages by location:", most_spoken_languages)
+print("Ten most populated countries:", [country['name'] for country in most_populated_countries])
